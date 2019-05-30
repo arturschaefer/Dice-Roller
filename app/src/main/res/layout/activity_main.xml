@@ -6,14 +6,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-
-    <TextView
+    <ImageView
+            android:contentDescription="@string/description_dice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
+            android:id="@+id/imageView_dice"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.4"
+            android:layout_marginStart="32dp" android:layout_marginEnd="32dp" app:srcCompat="@drawable/empty_dice"/>
+    <Button
+            android:text="@string/action_roll_dice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button_roll"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/imageView_dice"
+            android:layout_marginTop="32dp"/>
 </android.support.constraint.ConstraintLayout>
